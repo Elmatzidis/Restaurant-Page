@@ -14,15 +14,26 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Webpack App",
       filename: "index.html",
-      template: path.resolve(__dirname, "src/template.html"), // 👈 safer
+      port:8080,
+      template: path.resolve(__dirname, "src/template.html"), 
     }),
   ],
+  devtool: "eval-source-map",
+  devServer: {
+    port:8080,
+    open:true,
+    watchFiles: ["./src/template.html"],
+  },
 
   module: {
     rules: [
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },

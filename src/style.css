@@ -1,44 +1,111 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px; /* Key for the luxury look */
 }
 
-.content{
-    background-color: yellow;
-    width: 100%;
-    height: 100vh;
+.content {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.nav{
-    width: 100%;
-    height: 10vh;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.643);
-    display: flex;
-    
+.nav {
+  width: 100%;
+  min-height: 8vh;
+  background-color: rgba(0, 0, 0, 0.643);
+  display: flex;
+  align-items: center;
 }
 
-.menu-container{
-    width: 100%;
-    height: 100%;
-    background-color: blue;
+.menu-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.menu-container ul{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    color: #fff;
-    transition: 250ms;
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    color: #fff;
+.menu-container ul {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  flex-wrap: wrap;
 }
 
-.menu-container ul li a:hover{
-    color: #bfbebe;
-    scale: 1.1;
+.menu-container ul li {
+  display: flex;
+}
+
+.menu-container ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 150ms;
+  font-size: clamp(1rem, 2.5vw, 1.9rem);
+}
+
+.menu-container ul li a:hover {
+  color: #8b8989;
+  transform: scale(1.1);
+}
+
+a:visited {
+  color: rgb(255, 255, 255);
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+}
+
+.catalog-box {
+  width: 100%;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 5vw, 5rem);
+  flex-wrap: wrap;
+}
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  border: 2px solid gold;
+  min-height: 65vh;
+}
+
+.catalog h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.menu-section {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.menu-section h3 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+
+.menu-section p {
+  display: flex;
+  font-weight: 100;
+  justify-content: space-between;
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
+  font-style: italic;
 }
