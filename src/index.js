@@ -15,9 +15,18 @@ function pageCreate() {
 
 // Loads the starting menu navigation
 function loadNavigation() {
+
   const nav = document.createElement("div");
+  const homeContent=document.createElement("div")
+  // const overlay=document.createElement("div")
+
   content.appendChild(nav);
+  content.appendChild(homeContent)
+  content.classList.add("overlay")
+
+  homeContent.classList.add("homeContent")
   nav.classList.add("nav");
+
   nav.innerHTML = `
   <div class="menu-container" >
     <ul>
@@ -26,6 +35,14 @@ function loadNavigation() {
         <li><a href="#About">About</a></li>
     </ul>
   </div>`;
+
+  homeContent.innerHTML=`
+  <div id="Home" class="content overlay">
+  <h1>The Golden Hearth</h1>
+  <p>Authentic Wood-Fired Flavors & Craft Spirits</p>
+  <button class="homeBtn">Book a table now!</button>
+  </div>
+  `
 }
 
 // Loads the Catalogs of the page
